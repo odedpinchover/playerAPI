@@ -1,5 +1,6 @@
 package com.example.demo.parser;
 
+import com.example.demo.Consts.Constants;
 import com.example.demo.DTOs.PlayerDTO;
 import org.springframework.core.io.ClassPathResource;
 
@@ -43,22 +44,22 @@ public class PlayerParser
 				}
 				else
 				{
-					String playerID = split[location.get("playerID")];
-					Integer birthYear = split[location.get("birthYear")].isEmpty() ? -1 : Integer.valueOf(location.get("birthYear"));
-					Integer birthMonth = split[location.get("birthMonth")].isEmpty() ? -1 : Integer.valueOf(split[location.get("birthMonth")]);
-					Integer birthDay = split[location.get("birthDay")].isEmpty() ? -1 : Integer.valueOf(split[location.get("birthDay")]);
-					String birthCountry = split[location.get("birthCountry")];
-					String birthState = split[location.get("birthState")];
-					String birthCity = split[location.get("birthCity")];
-					Integer deathYear = split[location.get("deathYear")].isEmpty() ? -1 : Integer.valueOf(split[location.get("deathYear")]);
-					Integer deathMonth = split[location.get("deathMonth")].isEmpty() ? -1 : Integer.valueOf(split[location.get("deathMonth")]);
-					Integer deathDay = split[location.get("deathDay")].isEmpty() ? -1 : Integer.valueOf(split[location.get("deathDay")]);
-					String deathCountry = split[location.get("deathCountry")];
-					String deathState = split[location.get("deathState")];
-					String deathCity = split[location.get("deathCity")];
-					String nameFirst = split[location.get("nameFirst")];
-					String nameLast = split[location.get("nameLast")];
-					String nameGiven = split[location.get("nameGiven")];
+					String playerID = split[location.get(Constants.playerID)];
+					Integer birthYear = split[location.get(Constants.birthYear)].isEmpty() ? -1 : Integer.valueOf(location.get(Constants.birthYear));
+					Integer birthMonth = split[location.get(Constants.birthMonth)].isEmpty() ? -1 : Integer.valueOf(split[location.get(Constants.birthMonth)]);
+					Integer birthDay = split[location.get(Constants.birthDay)].isEmpty() ? -1 : Integer.valueOf(split[location.get(Constants.birthDay)]);
+					String birthCountry = split[location.get(Constants.birthCountry)];
+					String birthState = split[location.get(Constants.birthState)];
+					String birthCity = split[location.get(Constants.birthCity)];
+					Integer deathYear = split[location.get(Constants.deathYear)].isEmpty() ? -1 : Integer.valueOf(split[location.get(Constants.deathYear)]);
+					Integer deathMonth = split[location.get(Constants.deathMonth)].isEmpty() ? -1 : Integer.valueOf(split[location.get(Constants.deathMonth)]);
+					Integer deathDay = split[location.get(Constants.deathDay)].isEmpty() ? -1 : Integer.valueOf(split[location.get(Constants.deathDay)]);
+					String deathCountry = split[location.get(Constants.deathCountry)];
+					String deathState = split[location.get(Constants.deathState)];
+					String deathCity = split[location.get(Constants.birthCity)];
+					String nameFirst = split[location.get(Constants.nameFirst)];
+					String nameLast = split[location.get(Constants.nameLast)];
+					String nameGiven = split[location.get(Constants.nameGiven)];
 
 					Integer weight;
 					Integer height;
@@ -70,14 +71,14 @@ public class PlayerParser
 					String bbrefID;
 					if (split.length > 16)
 					{
-						weight    = split[location.get("weight")].isEmpty() ? -1 : Integer.valueOf(split[location.get("weight")]);
-						height    = split[location.get("height")].isEmpty() ? -1 : Integer.valueOf(split[location.get("height")]);
-						bats      = split[location.get("bats")];
-						throwes   = split[location.get("throws")];
-						debut     = split[location.get("debut")].isEmpty() ? new Date(Long.MIN_VALUE) : Date.valueOf(split[location.get("debut")]);
-						finalGame = split[location.get("finalGame")].isEmpty() ? new Date(Long.MIN_VALUE) : Date.valueOf(split[location.get("finalGame")]);
-						retroID   = split[location.get("retroID")];
-						bbrefID   = split[location.get("bbrefID")];
+						weight    = split[location.get(Constants.weight)].isEmpty() ? -1 : Integer.valueOf(split[location.get(Constants.weight)]);
+						height    = split[location.get(Constants.height)].isEmpty() ? -1 : Integer.valueOf(split[location.get(Constants.height)]);
+						bats      = split[location.get(Constants.bats)];
+						throwes   = split[location.get(Constants.throwes)];
+						debut     = split[location.get(Constants.debut)].isEmpty() ? new Date(Long.MIN_VALUE) : Date.valueOf(split[location.get(Constants.debut)]);
+						finalGame = split[location.get(Constants.finalGame)].isEmpty() ? new Date(Long.MIN_VALUE) : Date.valueOf(split[location.get(Constants.finalGame)]);
+						retroID   = split[location.get(Constants.retroID)];
+						bbrefID   = split[location.get(Constants.bbrefID)];
 					}
 					else
 					{
